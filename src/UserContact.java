@@ -29,7 +29,7 @@ import java.io.PrintWriter;
     {
         try(PrintWriter out = new PrintWriter("receipt.txt"))
         {
-            out.println(user.getInfo() + "\r\nCart: "+ Products.createList()); // saves string into txt
+            out.println(user.getInfo() + "\r\nCart: "+ Products.createList()+"\r\nTotal cash: "+Products.getMoney()); // saves string into txt
         }
         catch(Exception ex)
         {
