@@ -6,6 +6,7 @@ import java.util.Scanner;
 
  class Products {
     private static List<String> list_products = new ArrayList<>();
+    private static StringBuilder products_builder = new StringBuilder();
     private static double money = 0;
 
      private static void getProducts() throws IOException {
@@ -42,16 +43,23 @@ import java.util.Scanner;
                 }
             else {p_list.add(list_products.get(real_x));}
         }
-
-         for(String o :p_list ) // count money
+         for(String b : p_list)
          {
-             if(o.contains("Bread")){ money += 2;}
-             else if(o.contains("Beer")){ money += 3;}
-             else if(o.contains("Milk")){ money += 1;}
-             else if(o.contains("Cheese")){ money += 6;}
-             else if(o.contains("Chips")){ money += 12;}
+             products_builder.append(b);
+             products_builder.append(" ");
          }
-         return  p_list+"\r\nTotal cash: "+money+ "$";
+
+         String numbers = products_builder.toString().replaceAll("[^0-9]*[^0-9.]"," ");
+         Scanner outer = new Scanner(numbers);
+
+         while(outer.hasNext())
+         {
+
+             double num = Double.parseDouble(outer.next());
+             money+=num;
+         }
+
+         return  products_builder+"\r\nTotal cash: "+money+ "$";
 
      }
 
