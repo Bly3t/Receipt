@@ -3,3 +3,4 @@ Beer - 3$
 Milk - 1$
 Cheese - 6$
 Chips - 12$
+Chocolate - 4.5$
