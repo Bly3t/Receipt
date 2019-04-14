@@ -23,7 +23,7 @@ import java.util.Scanner;
      }
 
 
-      static String createList() throws  IOException
+      static StringBuilder createList() throws  IOException
      {
          List<String> p_list = new ArrayList<>();
          Products.getProducts();
@@ -49,6 +49,11 @@ import java.util.Scanner;
              products_builder.append(" ");
          }
 
+         return products_builder;
+
+     }
+      static String getMoney()
+     {
          String numbers = products_builder.toString().replaceAll("[^0-9]*[^0-9.]"," ");
          Scanner outer = new Scanner(numbers);
 
@@ -58,9 +63,9 @@ import java.util.Scanner;
              double num = Double.parseDouble(outer.next());
              money+=num;
          }
-
-         return  products_builder+"\r\nTotal cash: "+money+ "$";
-
+         return money+"$";
      }
 
 }
+
+
