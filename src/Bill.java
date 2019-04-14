@@ -1,9 +1,8 @@
-import java.io.IOException;
 import java.util.Scanner;
 
 
 public class Bill {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Scanner sc_1 = new Scanner(System.in);
         System.out.print("Name: ");
         String name = sc_1.nextLine();
