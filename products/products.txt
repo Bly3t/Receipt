@@ -1,0 +1,5 @@
+Bread - 2$
+Beer - 3$
+Milk - 1$
+Cheese - 6$
+Chips - 12$
